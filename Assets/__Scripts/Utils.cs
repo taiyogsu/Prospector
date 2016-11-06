@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 // This is actually OUTSIDE of the Utils Class
 public enum BoundsTest {
@@ -537,5 +538,9 @@ public class Easing {
 		
 		return( u2 );
 	}
-	
+
+    internal static float Ease(float u, object easingCurve)
+    {
+        throw new NotImplementedException();
+    }
 }
