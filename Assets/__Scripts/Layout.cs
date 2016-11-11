@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 // The SlotDef class is not a subclass of MonoBehaviour, so it doesn't need a
 //  separate C# file.
-/*[System.Serializable] // This makes SlotDefs visible in the Unity Inspector pane
+[System.Serializable] // This makes SlotDefs visible in the Unity Inspector pane
 public class SlotDef
 {
     public float x;
@@ -16,7 +16,7 @@ public class SlotDef
     public List<int> hiddenBy = new List<int>();
     public string type = "slot";
     public Vector2 stagger;
-}*/
+}
 
 public class Layout : MonoBehaviour
 {
@@ -74,7 +74,7 @@ public class Layout : MonoBehaviour
             {
                 // pull additional attributes based on the type of this <slot>
                 case "slot":
-                    //tSD.faceUP = (slotsX[i].att("faceup") == "1");
+                    tSD.faceUP = (slotsX[i].att("faceup") == "1");
                     tSD.id = int.Parse(slotsX[i].att("id"));
                     if (slotsX[i].HasAtt("hiddenby"))
                     {

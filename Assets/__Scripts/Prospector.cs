@@ -161,7 +161,7 @@ public class Prospector : MonoBehaviour {
         {
             // ^ Iterate through all the SlotDefs in the layout.slotDefs as tSD
             cp = Draw(); // Pull a card from the top (beginning) of the drawPile
-            //cp.faceUP = tSD.faceUP;    // Set its faceUp to the value in SlotDef
+            cp.faceUP = tSD.faceUP;    // Set its faceUp to the value in SlotDef
             cp.transform.parent = layoutAnchor;  // Make its parent layoutAnchor
             // This replaces the previous parent: deck.deckAnchor, which appears
             //   as _Deck in the Hierarchy when the scene is playing.
